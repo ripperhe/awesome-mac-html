@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- 网站标题 -->
+  <title>Awesome Mac</title>
+  <!-- 网站icon -->
+  <link rel="icon" href="https://raw.githubusercontent.com/jaywcjlove/awesome-mac/master/build/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- Theme 主题设置 [vue.css] [buble.css] [dark.css] [pure.css] -->
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <!-- Plugin gitalk -->
+  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+</head>
+<body>
+  <!-- loading显示的文字 -->
+  <div id="app">Loading...</div>
+  <script>
+    window.$docsify = {
+      // ************************* Configuration *************************
+      // https://docsify.js.org/#/zh-cn/
+      homepage:
+      'https://raw.githubusercontent.com/jaywcjlove/awesome-mac/master/README-zh.md',
+      maxLevel:2,
+      loadNavbar: true,
+      mergeNavbar: true,
+      name: 'Awesome Mac',
+      repo: 'ripperhe/awesome-mac-html',
+      auto2top: true,
+
+      // ************************* Plugins *************************
+      // https://docsify.js.org/#/zh-cn/plugins
+      // 全文搜索 - Search
+      search: 'auto',
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <!-- ************************* Plugins ************************* -->
+  <!-- Plugins：全文搜索 -->
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <!-- Plugins：图片缩放 - Zoom image -->
+  <script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+  <!-- Plugins：gitalk -->
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script>
+      const gitalk = new Gitalk({
+          clientID: '6dcf63ab4e93d33d33fa',
+          clientSecret: 'aa430158c8d3fc3c2c15c94063854d6513bda0e6',
+          repo: 'awesome-mac-html',
+          owner: 'ripperhe',
+          admin: ['ripperhe'],
+          // id: '{{ page.url | truncate: 50, '' }}',
+          distractionFreeMode: false // Facebook-like distraction free mode
+      })
+      gitalk.render('gitalk-container')
+  </script>
+</body>
+</html>
